@@ -1,0 +1,93 @@
+body {
+  background-color: #0a0f24;
+  color: #00e5ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.container {
+  text-align: center;
+  position: relative; /* Ensure relative positioning for children */
+  z-index: 1; /* Ensure children are above backdrop */
+}
+
+h1,
+h2,
+h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #1c2431;
+  color: #00e5ff;
+}
+
+button {
+  width: 200px; /* Adjust button width */
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #00e5ff;
+  color: #0a0f24;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00b3cc;
+}
+
+a {
+  color: #00e5ff;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#login {
+  display: none;
+}
+
+#birthdayMessageContainer {
+  display: none;
+  position: fixed; /* Fixed position to cover entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 15, 36, 0.9);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; /* Center the text */
+  font-size: 1.5em;
+  z-index: 2; /* Ensure higher than underlying content */
+}
+
+#birthdayMessage {
+  margin-bottom: 20px; /* Ensure spacing between message and link */
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form WebPage</title>
+    <link rel="stylesheet" href="assignment.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="signup" id="signup">
+        <h2>Create an Account</h2>
+        <h3>Signup</h3>
+        <form id="signupForm">
+          <input type="text" placeholder="Username" required />
+          <input type="date" placeholder="Date-of-birth" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <a href="#">Forgot your password?</a>
+          <button type="submit">Signup</button>
+          <a href="#" onclick="showLogin()">Already have an account? Login</a>
+        </form>
+      </div>
+      <div class="login" id="login">
+        <h3>Form to get details</h3>
+        <h3>Login</h3>
+        <form id="loginForm">
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+          <button type="button" onclick="showSignup()" id="logoutButton">
+            Back to Signup
+          </button>
+        </form>
+      </div>
+      <div id="birthdayMessageContainer" style="display: none">
+        <div id="birthdayMessage"></div>
+        <!-- <button onclick="showLogin()">Back to Login</button> -->
+        <button type="submit" onclick="showLogin()" id="logoutButton">
+          Back to login
+        </button>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script src="assignment.js"></script>
+  </body>
+</html>
